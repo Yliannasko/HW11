@@ -1,26 +1,43 @@
 package org.example.Radio;
 
 public class Radio {
-    private int quantityStation = 10;
-    private int maxStation=9;
+    private int numberRadioStation;
+    private int amountStation = 10;
     private int minStation = 0;
-    private int numberRadioStation = minStation;
+    private int maxStation = 9;
+    private int minVolume = 0;
+    private int maxVolume = 100;
+    private int volume;
 
-    public Radio(int size){
-        maxStation=minStation+size;
+    public Radio() {
     }
 
-    //private int numberRadioStation;
-    private int volume;
+    public Radio(int amountStation) {
+        this.amountStation = amountStation;
+        this.maxStation = this.amountStation - 1;
+    }
+
+
+    public int getAmountStation() {
+        return amountStation;
+    }
+
+    public int getMinStation() {
+        return minStation;
+    }
+
+    public int getMaxStation() {
+        return maxStation;
+    }
 
     public int getNumberRadioStation() {
         return numberRadioStation;
     }
 
     public int getVolume() {
-
         return volume;
     }
+
 
     public void setNumberNow(int newNumberNow) {
         if (newNumberNow < 0) {
